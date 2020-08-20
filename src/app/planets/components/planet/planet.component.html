@@ -1,0 +1,27 @@
+<div class="planet">
+  <div class="planet-wrapper" *ngIf="planet">
+    <h1 class="planet-name-text">{{planet.name}}</h1>
+    <div class="planet-image-container">
+      <div class="planet-image"
+           [style.backgroundImage]="'url('+ planet.imageUrl +')'"
+      ></div>
+    </div>
+    <div class="planet-info-container">
+      <table>
+        <tr>
+          <th class="tab-title">Region</th>
+          <td class="tab-info">{{planet.region}}</td>
+        </tr>
+        <tr>
+          <th class="tab-title">System</th>
+          <td class="tab-info">{{planet.system}}</td>
+        </tr>
+        <tr>
+          <th class="tab-title">Description</th>
+          <td class="tab-info">{{planet.description}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <werf-common-spinner [config]="spinnerConfig" *ngIf="loadInProgress"></werf-common-spinner>
+</div>

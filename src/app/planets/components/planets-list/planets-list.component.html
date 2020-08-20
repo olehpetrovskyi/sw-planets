@@ -1,0 +1,6 @@
+<div class="planets-list">
+  <werf-common-spinner [config]="spinnerConfig" *ngIf="loadInProgress"></werf-common-spinner>
+  <a class="planet-wrapper" *ngFor="let planet of planetsList" [routerLink]="['/planet', planet.name]">
+    <swp-planet-thumbnail [planet]="planet"></swp-planet-thumbnail>
+  </a>
+</div>

@@ -1,0 +1,6 @@
+<header class="header" *ngIf="authService.isSignedIn()">
+  <span class="user-email">{{authService.currentUser.email}}</span>
+  <span class="logout-button-container">
+    <button mat-raised-button (click)="authService.logOut()">Logout</button>
+  </span>
+</header>

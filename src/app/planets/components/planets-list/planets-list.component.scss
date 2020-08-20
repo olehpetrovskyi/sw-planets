@@ -1,0 +1,16 @@
+@import "layout-variables";
+
+.planets-list {
+  max-width: $max-content-width;
+  margin: 0 auto;
+
+  .planet-wrapper {
+    margin-bottom: $md-offset;
+    display: block;
+    text-decoration: none;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

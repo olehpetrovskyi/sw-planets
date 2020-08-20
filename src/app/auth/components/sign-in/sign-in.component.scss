@@ -1,0 +1,34 @@
+@import "layout-variables";
+@import "color-variables";
+
+.sign-in-container {
+  display: table;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $primary-background-color;
+
+  padding: $md-offset;
+
+  .sign-in-form-container {
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: 35px;
+  }
+
+  .sign-in-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: $section-background-color;
+    padding: $md-offset;
+    border-radius: 5px;
+
+
+    .sw-form-field {
+      width: 100%;
+      margin-bottom: $md-offset;
+    }
+  }
+}

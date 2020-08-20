@@ -1,0 +1,25 @@
+<div class="sign-in-container">
+  <div class="sign-in-form-container">
+    <div class="sign-in-form">
+      <werf-common-spinner [config]="submitSpinnerConfig" *ngIf="inProgress"></werf-common-spinner>
+      <form [formGroup]="signInForm" class="sw-form" *ngIf="!inProgress">
+        <mat-form-field appearance="outline" class="sw-form-field">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email" type="email" formControlName="email" autocomplete="off" class="qa-email-input" required>
+          <mat-error *ngIf="emailField.errors && emailField.errors.email" class="qa-invalid-email-error">
+            <span>Please enter a valid email address!</span>
+          </mat-error>
+          <mat-error *ngIf="emailField.errors && emailField.errors.required" class="qa-required-email-error">
+            <span>Email is required!</span>
+          </mat-error>
+        </mat-form-field>
+        <button class="sw-button sign-in-submit-btn qa-sign-in-button"
+                mat-raised-button
+                (click)="submit()"
+        >
+          Sign In
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

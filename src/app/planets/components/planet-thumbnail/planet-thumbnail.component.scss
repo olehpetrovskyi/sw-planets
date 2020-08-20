@@ -1,0 +1,37 @@
+@import "color-variables";
+@import "layout-variables";
+
+$planet-block-height: 95px;
+$planet-image-width: 125px;
+
+.planet-thumbnail {
+  position: relative;
+  height: $planet-block-height;
+  padding-left: $planet-image-width + $md-offset;
+  background-color: $section-background-color;
+
+  .planet-thumbnail-image-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $planet-block-height;
+    width: $planet-image-width;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .planet-thumbnail-name {
+    height: $planet-block-height;
+    line-height: $planet-block-height;
+
+    .planet-thumbnail-name-text {
+      margin: 0;
+      color: $text-color-dark;
+      font-size: 28px;
+      font-weight: 500;
+      text-decoration: none;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
